@@ -12,7 +12,8 @@ async function postProperty(req,res){
 
     try {
         const data = await create.postPropertySequelize(req.body) 
-        res.status(200).json(data)
+        return data
+     //   res.status(200).json(data)
     } catch (error) {
         res.status(500).json(error)
     }

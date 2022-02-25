@@ -16,6 +16,10 @@ require('./models/mongo')
 
 app.use('/property',route)
 
+console.log(process.env.NODE_ENV)
+
+if(process.env.NODE_ENV != 'test'){
 app.listen(port , ()=>{
     console.log("app is running on ", port)
 })
+}

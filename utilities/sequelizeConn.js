@@ -1,7 +1,13 @@
 const Sequelize = require('sequelize')
 const {DBURI} = require('./keys')
 
-const sequelize = new Sequelize(DBURI) 
+// const sequelize = new Sequelize(DBURI) 
+
+
+const sequelize = new Sequelize('kayskill', 'kunal', 'admin', {
+    host: 'localhost',
+    dialect: 'postgres'
+  });
 
 sequelize.authenticate()
 .then(() => {
